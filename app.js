@@ -98,7 +98,7 @@ app.get("/get/v1/task/:id", async (req, res) => {
   // create many
   app.post("/post/v1/task", async (req, res) => {
     try {
-      const users = await User.createCollection("req.body");
+      const users = await User.createCollection(req.body);
       res.status(200).json({
         status: "Succes",
         data: users,
